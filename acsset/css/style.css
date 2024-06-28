@@ -1,0 +1,524 @@
+*{
+    box-sizing: border-box;
+    /* giúp độ height, weight ko thay đổi bởi pading, border */
+}
+:root{
+    --font-heading: "Sen", sans-serif;
+    --btn-color: #1ebfc1;
+}
+body{
+    font-family: "Poppins", sans-serif;
+}
+/* =========================COMMON-PHẦN CHUNG================================================== */
+.main-conten{
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+   
+    
+a{
+    text-decoration: none;
+    color: #000;
+}
+ul{
+    list-style: none;
+}
+img{
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+/* =========================HEADER================================================== */
+.header{
+   margin-top: 20px;
+   position: sticky;
+   top: -26px;
+   z-index:1;
+   background-color: #fff;
+   padding-bottom: 30px;
+}
+.body-header{
+    display: flex;
+    padding: 52px 0 8px;
+    text-align: center;
+    align-items: center;
+    justify-content:space-between;
+}
+.nav1{
+    align-items: center;
+    /* margin-top: 7px; */
+
+}
+.body-header ul{
+    display: flex;
+    width: auto;
+    width: 546px;
+    height: 24px;
+    margin-left: 200px;
+    margin-top: 20px;
+    
+}
+
+.body-header ul li{
+    margin-right: 30px;
+    padding-bottom: 10px;
+   
+    
+}
+.body-header .nav1 a{
+    /* padding:  8px 21px; */
+    font-size: 17px;
+    font-weight: 400;
+    /* line-height: 24px; */
+    text-align: left;
+    color: #2F3A3B;
+    height: auto;
+    width: auto;
+}
+ /* phần hover nó hien mau khac va cỡ chứ khac */
+ .nav1 .s1 a, .body-header .btn:hover,
+  .body-header .sign .sign-up, /* viet nhu nay no se ap dung cho ca 2 ddtg -> giup chu home luon den */
+.nav1 a:hover{
+    color: #2adada;
+    text-shadow: 1px 0 0 currentColor; /* mauf hien tai */
+}
+
+
+
+/* menu da cap */
+
+.body-header li {
+    position: relative;
+}
+.body-header li .con{
+   display: none;
+   
+    position: absolute;
+}
+.body-header li .con ul{
+    flex-direction: column;
+    text-align: left;
+    margin-left: 30px;
+}
+.body-header li .con ul li a{
+    width: 200px;
+    padding: 10px 50px ;
+}
+.body-header li .con li{
+
+    margin: 1px 0;
+    width: 200px;
+    padding: 5px 0px;
+    background-color: rgb(174, 152, 121);
+    /* padding-left: auto; */
+   
+}
+.body-header li .con li:hover{
+    background-color: rgb(193, 222, 165);
+}
+.body-header li .con li a{
+    color: aliceblue;
+}
+.body-header li:hover>.con{
+    display: block;
+}
+
+/* =phần button */
+.body-header .sign .sign-in{
+    margin-right: 20px;
+}
+.body-header .btn{
+   border: 1.5px solid transparent ;
+   background-color: #fff;
+   padding: 15px 20px;
+   cursor:pointer;
+   font-family: Poppins;
+font-size: 20px;
+font-weight: 400;
+line-height: 24px;
+    text-align: center;
+
+}
+
+.body-header .sign .sign-in:hover{
+    border: 1px solid #20bfbc ;
+    color: #f6fafa;
+    background: var(--btn-color);
+    
+}
+.body-header .sign-up{
+    border: 1px solid #20bfbc ;
+}
+.body-header .sign .sign-up:hover{
+    border: 1px solid #20bfbc ;
+    color: #f6fafa;
+    background: var(--btn-color);
+    
+}
+/* ===================phanaf main===================== */
+/* ============banner========================== */
+.banner{
+    margin-top: 45px;
+    padding-top: 45px;
+    padding-bottom: 79px;
+}
+.body-banner{
+    display: flex;
+}
+
+/* trai */
+
+.body-banner .left-banner{
+    padding-top: 94px;
+    max-width: 50%;
+    .easy{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        text-align: left;
+        color: #767E7E;
+         margin-bottom: 20px;  
+    
+    }
+    .word{
+        font-size: 62px;
+        font-weight: 700;
+        line-height: 72px;
+        text-align: left;
+        color: #0D1111;
+        margin-bottom: 50px;
+    }
+    span.desc.bull{
+        display: block;
+        width: 360px;
+        height: 66px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 32px;
+        text-align: left;
+        color: #9DA6A5;
+    }
+    .cta-group{
+        margin-top: 50px;
+        display: flex;
+        .btn{
+            color: #fff;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            padding: 0 41px;
+            min-width: 186px;
+            line-height: 68px;
+            border-radius: 14px;
+            background: #1ebfc1;
+            box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.05);
+            margin-right: 50px; 
+        }
+        .cta-btn{
+            display: flex;
+            width: 62px;
+            height: 62px;
+            background: #FFFFFF;
+            box-shadow: 0px 22px 50px 0px #0000000D;
+            border: 0px solid transparent;
+            cursor: pointer;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            color: #1ebfc1;
+            
+        }
+        .cta-btn:hover{
+            background: #1ebfc1;color: #fff;
+           color: #f6fafa;
+            box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.05);
+        }
+    }
+
+}
+
+/* banner-phai dung scss*/
+.body-banner .right-banner{
+    align-items: end;
+    width: 52%;
+    position: relative;
+    >img{
+        display: block;
+        width: 576px;
+        height: 635px;
+        object-fit: cover;
+        border-radius: 20px;
+        margin-left: 20px;
+
+    }
+    .gr{
+        cursor: pointer;
+    }
+   
+    .group-1000{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        position: absolute;
+        top: 149px;
+        left: -40px;
+        width: 157px;
+        height: 75px;
+        border-radius: 18px;
+        background: #fefefd;
+        box-shadow: 0px 10px 80px 0px rgba(0, 0, 0, 0.05);
+        .h3-gr{
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 15px;
+            text-align: left;
+            color: #0D1111;
+
+            
+        }
+        
+    }
+    .group-schedules{
+        position: absolute;
+        top: 449px;
+        left: -40px;
+        width: 124px;
+        height: 132px;
+        background: #FFFFFF;
+        box-shadow: 0px 10px 80px 0px #0000000D;
+        width: 124px;
+        height: 132px;
+       
+        border-radius: 24px ;
+        text-align: center;
+        padding-top: 15px;
+        img{
+         margin-top: 10px;
+        }
+        .h3-gr{
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 15px;
+            color: #0D1111;
+        }
+        
+       
+        
+    }
+    .group-students{
+        position: absolute;
+        top: 500px;
+        left: 370px;
+        width: 207px;
+        height: 90px;
+        background-color: #fff;
+        text-align: center;
+        border-radius: 20px;
+        padding: 10px;
+        .stdent{
+            display: flex;
+            margin-left: 20px;
+            margin-top: 15px;
+            img{
+                margin-left: -5px;
+            }
+        }
+        .h3-gr{
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 15px;
+            color: #0D1111;
+        }
+    }
+}
+/* ============================== feature-tinhs nanwg==============================*/
+    /* margin-top: 70px; */
+.feature{
+    margin-top: 50px;
+    padding: 40px 0;
+    .body-feature{
+        margin-bottom: 70px;
+        padding: 40px 0;
+        width: 1024px;
+        height: 559px;
+        /* phia tren -above */
+        .text-common{
+            width: 591px;
+            height: 220px;
+            .fe{
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 18px;
+                text-align: left;
+                margin-bottom: 30px;
+                color: #767E7E;
+
+            }
+            .we{
+                font-size: 42px;
+                font-weight: 900;
+                line-height: 56px;
+                text-align: left;
+                width: 597px;
+                height: 112px;
+                margin-bottom: 30px;
+                color: #0D1111;
+
+                                
+            }
+            .read{
+                width: 590px;
+                height: 54px;
+                top: 166px;
+                left: 1px;
+                font-size: 19px;
+                font-weight: 400;
+                line-height: 27px;
+                text-align: left;
+                color: #767E7E;
+                padding-right: 10px;
+                display: block;
+
+            }
+
+        }
+        /* phia duoi below */
+        .section-feature{
+            margin-top: 140px;
+            width: 1024px;
+            height: 259px;
+            display: flex;
+            justify-content: space-between;
+            .section-child{
+                display: block;
+                width: 168px;
+                height: 259px;
+                border: 4px solid #FFFFFF;
+                .icon{
+                    width: 102px;
+                    height: 106px;
+                    border: 4px solid #FFFFFF;
+                    cursor: pointer;
+                    margin-bottom: 40px;
+                }
+                .title{
+                    margin-bottom: 10px;
+                    cursor: pointer;
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 30px;
+                    text-align: left;
+                    color: #0D1111;
+
+                }
+                .text{
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 27px;
+                    text-align: left;
+                    color: #9DA6A5;
+
+                }
+            }
+          
+            
+        }
+    }
+    
+}
+/* ================popular- pho bien======================= */
+.popular{   
+    .body-popular{
+        padding: 60px 0 84px 0;
+        margin-top: 136px;
+    /* above= tren */
+        .text-common{
+            width: 591px;
+            height: 290px;
+            .fe{
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 18px;
+                text-align: left;
+                margin-bottom: 30px;
+                color: #767E7E;
+
+            }
+            .we{
+                font-size: 42px;
+                font-weight: 900;
+                line-height: 56px;
+                text-align: left;
+                width: 396px;
+                height: 60px;
+                margin-bottom: 30px;
+                color: #0D1111;
+
+                                
+            }
+            .desc{
+                display: flex;
+                justify-content: space-between;
+                width: 1170px;
+                height: 182px;
+                align-items: center;
+                .read{
+                    width: 520px;
+                    height: 64px;
+                    top: 166px;
+                    left: 1px;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 27px;
+                    text-align: left;
+                    color: #767E7E;
+                    padding-right: 10px;
+                    display: block;
+    
+                }
+                .view-all{
+                    text-decoration: underline;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 21px;
+                    text-align: left;
+                    color: #1EBFC1;
+   
+                }
+            }
+
+        }
+    /* below=duoi */
+        .below{
+            margin-top: 50px;
+            padding: 20px 0;
+            .cards{
+                img{
+                    width: 359px;
+                    height: 393px;
+                    top: 261px;
+                    gap: 0px;
+                    border-radius: 28px;
+                    opacity: 0.35px;
+                    
+                }
+                .card-chid{
+                    background-color: rgb(215, 215, 39,0.2);
+                    width: 325px;
+                    height: 195px;
+                    top: 583px;
+                    left: 17px;
+                    border-radius: 18px;
+                                   
+                }
+            }
+        }
+    }
+}
+
+
+
+
