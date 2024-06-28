@@ -1,3 +1,6 @@
+html{
+    height: 100%;
+}
 *{
     box-sizing: border-box;
     /* giúp độ height, weight ko thay đổi bởi pading, border */
@@ -8,6 +11,7 @@
 }
 body{
     font-family: "Poppins", sans-serif;
+   min-height: 100%;
 }
 /* =========================COMMON-PHẦN CHUNG================================================== */
 .main-conten{
@@ -430,10 +434,13 @@ line-height: 24px;
     
 }
 /* ================popular- pho bien======================= */
-.popular{   
+.popular{ 
+    padding-bottom: 50px;
+    margin-bottom: 270px;  
     .body-popular{
         padding: 60px 0 84px 0;
         margin-top: 136px;
+        
     /* above= tren */
         .text-common{
             width: 591px;
@@ -493,7 +500,9 @@ line-height: 24px;
         }
     /* below=duoi */
         .below{
-            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: -150px;
             padding: 20px 0;
             .cards{
                 img{
@@ -503,22 +512,321 @@ line-height: 24px;
                     gap: 0px;
                     border-radius: 28px;
                     opacity: 0.35px;
-                    
+                    position: relative;
+                    cursor: pointer;
                 }
                 .card-chid{
-                    background-color: rgb(215, 215, 39,0.2);
+                    position: absolute;
+                    margin-left: 17px;
+                    margin-top: 176px;
+                    background: rgb(255, 255, 255);
+                    box-shadow: 0px 16px 90px 0px #0000000D;
                     width: 325px;
-                    height: 195px;
-                    top: 583px;
-                    left: 17px;
+                    height: 195px;                  
                     border-radius: 18px;
-                                   
+                    padding: 20px 40px;
+                    .tile{
+                        cursor: pointer;
+                        font-size: 22px;
+                        font-weight: 700;
+                        line-height: 33px;
+                        text-align: left;
+                        margin-bottom: 20px;
+                        
+                    }
+                    .free{
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 24px;
+                        text-align: left;
+                        color: #9DA6A5;
+
+                        span{
+                            font-family: Poppins;
+                            font-size: 22px;
+                            font-weight: 700;
+                            line-height: 33px;
+                            text-align: left;
+                            color: #000;
+                        }
+                    }
+                    .web{
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 21px;
+                        text-align: left;
+                        color: #9DA6A5;
+                        padding-bottom: 10px;
+                        
+                    }
+                    .group{
+                        display: flex;
+                            
+                        .gr-child{
+                            margin-right: 20px;  
+                            display: flex;
+                            align-items: center;
+                            .dot{
+                                margin-right: 6px;
+                                width: 6px;
+                                height: 6px;
+                                top: 735px;
+                                left: 42px;
+                                background: #1EBFC1;
+                                border-radius: 50%;
+                                
+                            }
+                            .class{
+                                font-size: 15px;
+                                font-weight: 400;
+                                line-height: 21px;
+                                text-align: left;
+                                color: #9DA6A5;
+
+                            }
+                        }
+                    }
                 }
+            }
+
+        }
+        .below:hover .cards:not(:hover){
+            opacity: 0.7;
+            transform: scale(.95);
+            transition: all 0.7s ease-in-out ;
+        }
+        
+    }
+}
+/* ============================== COUNTDOWN==============================*/
+.countdown{
+    margin: 50px 0;
+    padding: 50px 0;
+    
+    .body-countdown{
+        justify-content: center;
+        margin-top: 100px;
+        display: flex;
+        .group1{
+            text-align: center;
+            padding: 20px 80px;
+            .number{
+                font-size: 62px;
+                font-weight: 700;
+                line-height: 93px;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            .text{
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 27px;
+                text-align: center;
+                color: #767E7E;
+
             }
         }
     }
 }
+/* ===========================testimonial=========================== */
+.testimonial{
+    margin-bottom: 100px;
+    .body-testimonial{
+        padding: 50px 0;
+        display: flex;
+        justify-content: space-between;
+        .left-testi{
+            width: 419px;
+            height: 407px;
+            top: 37px;
+            .text{
+                font-size: 32px;
+                font-weight: 400;
+                line-height: 48px;
+                text-align: left;
+                margin-top: 30px;
+                margin-bottom: 40px;
+                color: #5D6564;
 
+            }
+            .group-name{
+                font-size: 18px;
+                font-weight: 600;
+                text-align: left;
+                margin-bottom: 40px;
+            }
+            .group-icon{
+                display: flex;
+                .icon1{
+                    background: #fbfbfb;
+                    width: 50px;
+                    height: 50px;
+                    margin-right: 50px;
+                    border: 2px solid #1EBFC1;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;    
+                    color: #1EBFC1;
+                    cursor: pointer;
+                }
+                .icon1:hover{
+                    background-color: #1EBFC1;
+                    color:#f6fafa;
+                }
+            }
+        }
+        .right-testimonial{
+            position: relative;
+            padding: 100px 70px;
+            width: 679px;
+            height: 481px; 
+             /* left: 491px; */
+            text-align: center;
+            justify-content: center;
+            .image1, .image2, .image3, .image4, .image5, .image6{
+                cursor: pointer;
+            }
+            .image1{
+                position: absolute;
+                left: 535px;
+                top: 24px;
+            }
+            .image2{
+                position: absolute;
+                left: 155px;
+                top: 0px;
+            }
+            .image3{
+                position: absolute;
+                left: 15px;
+                top: 200px;
+            }
+            .image4{
+                position: absolute;
+                left: 185px;
+                top: 390px;
+            }
+            .image5{
+                position: absolute;
+                left: 505px;
+                top: 400px;
+            }
+            .image6{
+                position: absolute;
+                left: 255px;
+                top: 100px;
+            }
+            
+        }
+     
+    }
+}
+/* ==================================cta-call to action================================ */
+.cta{
+    margin-top: 130px;
+    padding: 76px 135px 88px;
+    background: #d5f7f6;
+    .body-cta{
+        display: flex;
+        justify-content: space-between;
+        /* left */
+        .left-cta{
+            width: 420px;
+            height: 108px;
+            .we{
+                width: 420px;
+                height: 63px;
+                top: 76px;
+                font-size: 42px;
+                font-weight: 700;
+                line-height: 63px;
+                text-align: left;
+                margin-bottom: 30px;
+                color: #0D1111;
+            }
+            .desc{
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 27px;
+                text-align: left;
+                color: #767E7E;
+                display: block;
+            }
 
+        }
+        /* right */
+        .right-cta{
+            .btn{
+                justify-content: center;
+                border: 1px solid transparent;
+                color: #fff;
+                text-align: center;
+                font-size: 1.5rem;
+                font-weight: 600;
+                padding: 0 41px;
+                min-width: 186px;
+                line-height: 68px;
+                border-radius: 14px;
+                background: #1ebfc1;
+                box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.05);
+            }
+            .btn:hover{
+                background-color: #fa7b7b;
+                color:#ededed;
+                transform: scale(1.1);
+                transition: all 0.5s ease-in-out ;
+            }
+        }
+    }
+}
+/* ==========================FOOT ER====================================*/
+footer{
+    .body-footer{
+        position: sticky;
+        top: 100%;
+        padding: 0px 0 20px 0;
+        margin-top: 50px;
+        .above-footer{
+            padding: 131px 0 0;
+            display: flex;
+            justify-content: space-between;
+            .column{
+                .title {
+                    color: #2e2e2e;
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    line-height: normal;
+                    margin-bottom: 40px;
+                }
+                .list{
+                    li{
+                        margin-bottom: 26px;
+                        margin-top: 18px;
+                        font-size: 1.4rem;
+                        line-height: normal;
+                        a{
+                            color: #535353;
 
-
+                        }
+                    }
+                }
+            }
+        
+        }
+        .below-footer{
+            .copyright {
+                margin-top: 80px;
+                text-align: center;
+                color: #b0b5b4;
+                font-size: 1.6rem;
+                line-height: normal;
+        }
+        }
+        
+    }
+}
+/* .footer{
+    flex-shrink: 0;
+} */
